@@ -56,10 +56,6 @@ void fun1(){
     fclose(fp);//关闭文件
 }
 
-int fun_(int a,int b){
-    return a*b-3;
-}
-
 int main() {
     int n;
     printf("input the number of dishes:\n");
