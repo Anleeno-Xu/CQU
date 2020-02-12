@@ -56,17 +56,12 @@ void fun1(){
     fclose(fp);//关闭文件
 }
 
-
 int main() {
-    //test();
-    fun();
-
-
-//    int n;
-//    printf("input the number of dishes:\n");
-//    scanf("%d", &n);
-//    printf("the step to move %d dishes:\n", n);
-//    hanoi(n, 'A', 'B', 'C');
+    int n;
+    printf("input the number of dishes:\n");
+    scanf("%d", &n);
+    printf("the step to move %d dishes:\n", n);
+    hanoi(n, 'A', 'B', 'C');
 
     /*Node *head, *pnew;
     int i, j, score;
