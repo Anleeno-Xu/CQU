@@ -239,3 +239,27 @@ int *array_reverse(int *a, int n) {
     }
     return a;
 }
+
+//八进制转十进制
+void octalToDecimal(){
+    char *p,s[6];int n;
+    p=s;
+    gets(p);
+    n=0;
+    while(*(p)!='\0')
+        {n=n*8+*p-'0';
+        p++;
+    }
+    printf("%d",n);
+}
+
+//循环右移三位
+void rightloop(char *a, int n){
+    char b[100];      //数组b要做的够大即可//
+    int m;
+    m=strlen(a)-n;               //求出除去要循环右移之后剩下的字符的个数//
+    strcpy(b,a+n);             // a+n，a代表a[0]的地址再加上n，表示要把a[n]之后的字符串（即那些不用循环右移的字符，共有m个）复制到数组b中。这时b[]="defghijk"。 //
+    strcpy(b+m,a);                  // b+m, 因为上面已经把没有循环的m个字符赋给了b，所以b[m]之前的不能在赋值了，只能把a的全部字符串赋给b[m]之后的空间了。这时b[]="defghijkabcdefghijk"。//
+    *(b+strlen(a))='/0';               //这里是问题的关键，要根据a字符串的长度来舍弃b数组中多余的字符串，并给数 组b加结束符。这时b[]="defghijkabc";//
+    strcpy(a,b);                                 //把数组b中调整好的字符串重新赋给数组a。//
+}

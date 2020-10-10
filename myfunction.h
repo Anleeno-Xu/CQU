@@ -40,4 +40,9 @@ char *remove_char_from_str(char s[],char c);
 
 int *array_reverse(int *a,int n);
 
+void octalToDecimal();
+
+//循环右移三位
+void rightloop(char *a, int n);
+
 #endif //CLIONPROJECT_MYFUNCTION_H
